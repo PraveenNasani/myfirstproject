@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv = "refresh" content = "10; url = http://127.0.0.1:8000/student/student_form/" />
+    <title>Registration Success</title>
+</head>
+<body>
+<h2>Hello {{ fname }},Your Registration is successfull</h2>
+<p>This page will be redirected to Student Registration Form in <span id="countdowntimer"> 10 </span> Seconds, else click here<a href="{% url 'student_form' %}">Refresh</a></p>
+
+<script type="text/javascript">
+    var timeleft = 10;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    if(timeleft <= 0)
+        clearInterval(downloadTimer);
+    },1000);
+</script>
+
+</body>
+</html>

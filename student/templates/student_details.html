@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Data</title>
+</head>
+<h2>Here are the details of students</h2>
+<h3>{{ details }}</h3>
+{% for i in details %}
+    <h3>{{i}} {{i.lname}} {{i.rollno}} {{i.grade}}</h3>
+{% endfor %}
+
+<table border = "1">
+    <caption>List of students with particulars</caption>
+    <tr>
+         <th>Name</th>
+         <th>Surname</th>
+         <th>RollNo</th>
+         <th>Grade</th>
+    </tr>
+    {%for i in details%}
+    <tr>
+         <td>{{i}}</td>
+         <td>{{i.lname}}</td>
+         <td>{{i.rollno}}</td>
+         <td>{{i.grade}}</td>
+    </tr>
+    {%endfor%}
+    <tr>
+         <td>Total</td>
+    </tr>
+</table>
+
+</html>

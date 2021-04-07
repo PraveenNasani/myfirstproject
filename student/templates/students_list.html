@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students List</title>
+</head>
+<body>
+<table  align='center' border = "1">
+    <caption>List of students Grade wise</caption>
+    {%for detail in details%}
+    <tr>
+         <th>Name</th>
+         <th>Surname</th>
+         <th>RollNo</th>
+         <th>Grade</th>
+    </tr>
+    {%for i in detail%}
+    <tr>
+         <td>{{i}}</td>
+         <td>{{i.lname}}</td>
+         <td>{{i.rollno}}</td>
+         <td>{{i.grade}}</td>
+    </tr>
+    {%endfor%}
+    <tr>
+         <td>Total</td>
+    </tr>
+
+    {%endfor%}
+</table>
+{%for detail in details%}<h2>#######Grade{{detail}}#######</h2><h2>Heyy {{detail.fname}}</h2>
+    {%for i in detail%}
+       <h3>{{i}} {{i.lname}} {{i.rollno}} {{i.grade}}</h3>
+    {% endfor %}
+{% endfor %}
+{% for i,j,l in new_list%}
+{% for x in i%}<h2>{{x.fname}} {{x.lname}} {{x.rollno}} {{x.grade}}</h2>{% endfor%}<h2>{{j}} and {{l}}</h2>
+{% endfor %}
+</body>
+</html>
