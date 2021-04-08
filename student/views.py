@@ -7,7 +7,7 @@ from django.views.decorators.csrf import csrf_protect
 # Create your views here.
 
 def index(request):
-    return HttpResponse('Heyy,its my first django project')
+    return HttpResponse('Heyy,its my first django project and i have made some changes')
 
 def second(request):
     return HttpResponse('<h2>Hey i am second line</h2>')
